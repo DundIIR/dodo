@@ -96,6 +96,18 @@ html {
 	}
 }
 
+#nprogress .bar {
+	@apply !bg-primary;
+}
+
+#nprogress .peg {
+	@apply !shadow-md shadow-primary;
+}
+
+#nprogress .spinner-icon {
+	@apply !border-t-primary border-l-primary;
+}
+
 @layer base {
 	* {
 		@apply border-border;

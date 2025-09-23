@@ -6,10 +6,11 @@ import { Title } from '../ui/title'
 import ProductCard from './productCard'
 import { useIntersection } from 'react-use'
 import { useCategoryStore } from '@/store/category'
+import { ProductWithRelations } from '@/types/prisma'
 
 interface IProps {
 	title: string
-	products: any[]
+	products: ProductWithRelations[]
 	categoryId: number
 	className?: string
 	listClassName?: string
@@ -25,13 +26,13 @@ const ProductsGroupList: FC<IProps> = ({
 	const { setActiveId } = useCategoryStore()
 
 	const intersectionRef = useRef(null)
-	const intersection = useIntersection(intersectionRef, { threshold: 0.4 })
+	const intersection = useIntersection(intersectionRef, { threshold: 0.7 })
 
 	useEffect(() => {
 		if (intersection?.isIntersecting) {
 			setActiveId(categoryId)
 		}
-	}, [categoryId, intersection, title])
+	}, [categoryId, intersection, title, setActiveId])
 
 	return (
 		<div
@@ -45,9 +46,11 @@ const ProductsGroupList: FC<IProps> = ({
 				{products.map(product => (
 					<ProductCard
 						key={product.id}
+						id={product.id}
 						name={product.name}
-						price={product.variant[0].price}
+						price={product.variations[0].price}
 						imageUrl={product.imageUrl}
+						ingredients={product.ingredients}
 					/>
 				))}
 			</div>

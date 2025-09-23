@@ -9,9 +9,18 @@ export interface IFilterCheckbox {
 	onCheckedChange?: (checked: boolean) => void
 	checked?: boolean
 	className?: string
+	nameGroup?: string
 }
 
-const FilterCheckbox: FC<IFilterCheckbox> = ({ text, value, endAdornment, onCheckedChange, checked, className }): JSX.Element => {
+const FilterCheckbox: FC<IFilterCheckbox> = ({
+	text,
+	value,
+	endAdornment,
+	onCheckedChange,
+	checked,
+	className,
+	nameGroup,
+}): JSX.Element => {
 	return (
 		<div className={cn('flex items-center space-x-2', className)}>
 			<Checkbox
@@ -19,9 +28,11 @@ const FilterCheckbox: FC<IFilterCheckbox> = ({ text, value, endAdornment, onChec
 				checked={checked}
 				value={value}
 				className="rounded-[8px] w-6 h-6"
-				id={`checkbox-${String(value)}`}
+				id={`checkbox-${String(nameGroup)}-${String(value)}`}
 			/>
-			<label htmlFor={`checkbox-${String(value)}`} className="leading-none cursor-pointer flex-1">
+			<label
+				htmlFor={`checkbox-${String(nameGroup)}-${String(value)}`}
+				className="leading-none cursor-pointer flex-1">
 				{text}
 			</label>
 			{endAdornment}
