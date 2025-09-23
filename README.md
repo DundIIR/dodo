@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🍕 Dodo Clone — Pet Project
 
-## Getting Started
+Копия веб-приложения Dodo Pizza, разработанная в учебных целях.  
+Проект демонстрирует работу с каталогом, фильтрами, корзиной, авторизацией и оплатой.
 
-First, run the development server:
+---
+
+## 🚀 Описание проекта
+
+Проект представляет собой клон Dodo Pizza, реализованный на **Next.js + React**.  
+Основные возможности:
+
+- 📋 **Главная страница с каталогом** — категории, фильтры, поиск.
+- 🔗 **Фильтры через URL-параметры** — при изменении фильтров они добавляются в строку браузера.
+- 🪞 **Параллельные роуты** — при нажатии на продукт открывается модальное окно с настройкой пиццы. При обновлении страницы модалка превращается в полноценную страницу товара.
+- 🛒 **Корзина** — добавление товаров, оформление заказа.
+- 💳 **Оплата Ю-касса** — после заполнения данных приходит письмо на почту, происходит редирект на оплату и подтверждение.
+- 👤 **Авторизация** — email/пароль, Google, GitHub. Личный кабинет с настройками пользователя.
+- 📚 **Истории на главной** — как в Dodo.
+
+---
+
+## 🖥️ Видео-демо (разделы проекта)
+
+| Раздел                      | Видео                                 |
+| --------------------------- | ------------------------------------- |
+| Каталог и выбор продуктов   | [🎥 Смотреть видео](ссылка-на-видео1) |
+| Фильтрация и URL-параметры  | [🎥 Смотреть видео](ссылка-на-видео2) |
+| Модальное окно товара       | [🎥 Смотреть видео](ссылка-на-видео3) |
+| Корзина и оформление заказа | [🎥 Смотреть видео](ссылка-на-видео4) |
+| Авторизация и профиль       | [🎥 Смотреть видео](ссылка-на-видео5) |
+
+---
+
+## 🛠️ Используемые технологии
+
+- **Frontend:** Next.js 15, React 19, TailwindCSS 4
+- **Backend:** Prisma + Next API routes
+- **Auth:** NextAuth (Google, GitHub, Email/Password)
+- **Payments:** Ю-касса
+- **State management:** Zustand
+- **Forms:** React Hook Form + Zod
+- **UI:** Radix UI, Lucide React, Tailwind Merge
+- **Email:** Resend + @react-email/render
+- **Дополнительно:** React Insta Stories, React Dadata
+
+---
+
+## 📦 Используемые пакеты
+
+| Пакет                                                | Для чего используется                               |
+| ---------------------------------------------------- | --------------------------------------------------- |
+| `next`                                               | Фреймворк React для SSR/SSG и роутинга              |
+| `react`, `react-dom`                                 | Основная библиотека UI                              |
+| `tailwindcss`                                        | Стилизация интерфейса                               |
+| `@radix-ui/react-*`                                  | Компоненты UI: диалоги, поповеры, селекты, чекбоксы |
+| `lucide-react`                                       | Иконки                                              |
+| `react-hook-form`                                    | Работа с формами                                    |
+| `zod`                                                | Валидация данных                                    |
+| `zustand`                                            | Глобальное хранилище состояния                      |
+| `prisma`, `@prisma/client`                           | ORM для базы данных                                 |
+| `bcrypt`                                             | Хэширование паролей                                 |
+| `next-auth`                                          | Авторизация пользователей                           |
+| `resend`, `@react-email/render`                      | Отправка email-уведомлений                          |
+| `react-dadata`                                       | Подсказки для адресов и данных пользователя         |
+| `qs`                                                 | Работа с query-параметрами в URL                    |
+| `react-hot-toast`                                    | Уведомления                                         |
+| `react-insta-stories`                                | Истории на главной                                  |
+| `vaul`                                               | Анимация и модальные панели                         |
+| `class-variance-authority`, `clsx`, `tailwind-merge` | Упрощение динамических классов                      |
+
+---
+
+## ⚙️ Установка и запуск проекта
 
 ```bash
+# 1. Клонировать репозиторий
+git clone https://github.com/ваш-username/dodo-clone.git
+
+# 2. Установить зависимости
+npm install
+
+# 3. Настроить .env (см. .env.example)
+
+# 4. Запустить проект
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

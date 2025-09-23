@@ -1,7 +1,6 @@
-import type { Metadata } from 'next'
 import { Nunito } from 'next/font/google'
 import './globals.css'
-import Header from '@/components/shared/header'
+import { Providers } from '@/components/shared/providers'
 
 const nunito = Nunito({
 	variable: '--font-nunito',
@@ -9,22 +8,18 @@ const nunito = Nunito({
 	weight: ['400', '500', '600', '700', '800', '900'],
 })
 
-export const metadata: Metadata = {
-	title: 'DoDo & Next.js',
-}
-
-export default function RootLayout({
+export default function Layout({
 	children,
 }: Readonly<{
 	children: React.ReactNode
 }>) {
 	return (
 		<html lang="ru">
-			<body className={`${nunito.className} antialiased`}>
-				<main className="min-h-screen">
-					<Header />
-					{children}
-				</main>
+			<head>
+				<link rel="icon" href="https://dodopizza.ru/favicon-48x48.png" />
+			</head>
+			<body className={`${nunito.className} antialiased scrollbar`}>
+				<Providers>{children}</Providers>
 			</body>
 		</html>
 	)
