@@ -21,14 +21,17 @@
 ---
 
 ## 🖥️ Видео-демо (разделы проекта)
+
 ### Каталог и выбор продуктов
 ![Image](https://github.com/user-attachments/assets/75d63c4f-728c-439f-a53f-4686ae53a643)
 
 ---
 ### Корзина и оформление заказа
----
+![Image](https://github.com/user-attachments/assets/0005be23-c9fb-4b90-bcbf-62
 
+---
 ### Авторизация и профиль
+![Image](https://github.com/user-attachments/assets/1d00f673-b7ec-4a71-a19c-438e19414bcb)
 
 ---
 
