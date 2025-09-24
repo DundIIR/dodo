@@ -27,7 +27,7 @@
 
 ---
 ### Корзина и оформление заказа
-![Image](https://github.com/user-attachments/assets/9560cc9c-7382-4742-bf1f-4d566ad60f38)
+![Image](https://github.com/user-attachments/assets/4a2a0b1b-ca76-4c89-bb4b-39ca58d9fd29)
 
 ---
 ### Авторизация и профиль
