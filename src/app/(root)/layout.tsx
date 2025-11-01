@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Header from '@/components/shared/header'
+import Footer from '@/components/shared/footer'
 
 export const metadata: Metadata = {
 	title: 'DoDo & Next.js',
@@ -16,6 +17,7 @@ export default function RootLayout({
 		<main className="min-h-screen">
 			<Header />
 			{children}
+			<Footer />
 			{modal}
 		</main>
 	)
